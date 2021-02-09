@@ -2,7 +2,7 @@
 #include <stdio.h> 
 #include <string.h> 
 #include <stdlib.h> 
-// Returns 'true' if the character is a DELIMITER. 
+
 bool isDelimiter(char ch) 
 { 
     if (ch == ' ' || ch == '+' || ch == '-' || ch == '*' ||  
@@ -13,7 +13,6 @@ bool isDelimiter(char ch)
     return (false); 
 } 
   
-// Returns 'true' if the character is an OPERATOR. 
 bool isOperator(char ch) 
 { 
     if (ch == '+' || ch == '-' || ch == '*' ||  
@@ -23,7 +22,6 @@ bool isOperator(char ch)
     return (false); 
 } 
   
-// Returns 'true' if the string is a VALID IDENTIFIER. 
 bool validIdentifier(char* str) 
 { 
     if (str[0] == '0' || str[0] == '1' || str[0] == '2' || 
@@ -34,7 +32,6 @@ bool validIdentifier(char* str)
     return (true); 
 } 
   
-// Returns 'true' if the string is a KEYWORD. 
 bool isKeyword(char* str) 
 { 
     if (!strcmp(str, "if") || !strcmp(str, "else") || 
@@ -53,7 +50,6 @@ bool isKeyword(char* str)
     return (false); 
 } 
   
-// Returns 'true' if the string is an INTEGER. 
 bool isInteger(char* str) 
 { 
     int i, len = strlen(str); 
@@ -70,7 +66,7 @@ bool isInteger(char* str)
     return (true); 
 } 
   
-// Returns 'true' if the string is a REAL NUMBER. 
+
 bool isRealNumber(char* str) 
 { 
     int i, len = strlen(str); 
@@ -91,7 +87,6 @@ bool isRealNumber(char* str)
     return (hasDecimal); 
 } 
   
-// Extracts the SUBSTRING. 
 char* subString(char* str, int left, int right) 
 { 
     int i; 
@@ -146,10 +141,8 @@ void parse(char* str)
     return; 
 } 
   
-// DRIVER FUNCTION 
 int main() 
 { 
-     // maximum legth of string is 100 here 
     FILE *fs;
     fs=fopen("exp4.txt","r");
     int counter=1;
@@ -159,12 +152,8 @@ int main()
         fclose(fs);
     }
     while(fscanf(fs,"%[^\n]\n",str)!=EOF){
-        // printf("Line : %d",counter);
-        
         printf("Code : %s\nLexical Analysis of this line is :\n",str);
-        parse(str); // calling the parse function 
-        // counter++;
+        parse(str);
     }
-  
-    return (0); 
+    getch();
 } 
