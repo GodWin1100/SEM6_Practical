@@ -1,7 +1,5 @@
 s = input("enter the msg : - ")
 k = int(input("enter the key : - "))
-# s="helloworld"
-# k=4
 l = [[] for j in range(k)]
 flag = 0
 for _ in range(0, len(s), (k - 1) * 2):
