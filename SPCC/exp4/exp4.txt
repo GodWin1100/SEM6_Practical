@@ -1,0 +1,29 @@
+void main()
+{
+    int op;
+    do{
+        printf("<:::::Playlist Manager:::::>\n");
+        printf("1 : Show All Music\n2 : Add New Music\n3 : Playlist\n4 : Exit\nYour Choice >>> ");
+        scanf("%d",&op);
+        printf("\n");
+        getchar(); 
+        switch(op)
+        {
+            case 1 : showMusic();
+                     break;
+
+            case 2 : addMusic();
+                     break;
+
+            case 3 : createPlaylist();
+                     break;
+
+            case 4 : printf("Exit...");
+                     break;
+
+            default : printf("Select Correct Option...\n");
+                      break;
+        }
+      }while(op!=4);
+    getch();
+}
