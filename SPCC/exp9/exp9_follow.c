@@ -31,6 +31,7 @@ scanf("%d", &n);
  scanf("%d%c",&choice,&ch);
  }
  while(choice==1);
+ getch();
 }
 void follow(char c)
 {

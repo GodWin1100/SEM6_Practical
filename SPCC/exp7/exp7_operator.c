@@ -143,4 +143,5 @@ if(strcmp(stack,"$E$")==0)
     printf("\nAccepted;");
 else
     printf("\nNot Accepted;");
+getch();
 }
