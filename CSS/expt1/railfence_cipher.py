@@ -27,6 +27,8 @@ for _ in range(0, len(s), (k - 1) * 2):
 e = ""
 for _ in range(len(l)):
     for __ in range(len(l[_])):
+        print(str(l[_][__]),end="")
         e += str(l[_][__])
+    print('\n')
 
 print(e)
